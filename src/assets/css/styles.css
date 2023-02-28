@@ -17,6 +17,7 @@
     /* align-items: center;
     justify-content: center;  enable this to center align the image */
     overflow-x: hidden;
+    overflow-y: hidden;
     /* background-color: red; */
 }
 
