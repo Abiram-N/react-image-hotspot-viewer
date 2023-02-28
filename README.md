@@ -1,6 +1,11 @@
 # React Image Hotspot Viewer - Material UI v5
 ### _View  hotspots over an image with tooltip_
 
+## Demo
+
+![productionimage](https://user-images.githubusercontent.com/42763936/221795862-bcce228e-dd9b-410b-987b-dc3c6082fc4b.gif)
+
+
 ## Installation
 
 React Image Hotspot Viewer requires [Node.js](https://nodejs.org/) v10+ to run.
