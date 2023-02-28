@@ -51,6 +51,10 @@
         "react-image-hotspot",
         "react-image-viewer"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Abiram-N/react-image-hotspot-viewer"
+    },
     "module": "dist/react-image-hotspot-viewer.esm.js",
     "size-limit": [
         {

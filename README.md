@@ -1,7 +1,7 @@
 # React Image Hotspot Viewer - Material UI v5
 ### _View  hotspots over an image with tooltip_
 
-This project uses [React](https://reactjs.org/) and [Material UI](https://material-ui.com/) for development.
+A React component to view add and manage hotspots over an image with tooltip. The component is built using [Material UI v5](https://material-ui.com/) and React](https://reactjs.org/) .
 
 ## Demo
 
