@@ -1,6 +1,8 @@
 # React Image Hotspot Viewer - Material UI v5
 ### _View  hotspots over an image with tooltip_
 
+This project uses [React](https://reactjs.org/) and [Material UI](https://material-ui.com/) for development.
+
 ## Demo
 
 ![productionimage](https://user-images.githubusercontent.com/42763936/221795862-bcce228e-dd9b-410b-987b-dc3c6082fc4b.gif)
@@ -130,3 +132,29 @@ export default App;
 | action.url | string |  | URL for hotspot | Yes if action type is URL |
 | action.label | string |  | Label for hotspot | No |
 | action.icon | string |  | Icon for hotspot | No |# react-image-hotspot-viewer
+
+
+## Upcoming Features
+
+Below are the features that are planned to be added in the near future.
+
+![EditableHotspots](https://user-images.githubusercontent.com/42763936/221799523-2238328a-dd1b-40e9-9ed8-8ed11f883909.gif)
+
+
+
+- [ ] Add support for adding hotspot from UI
+- [ ] Add support for custom tootip style
+- [ ] Add support for custom pin styles
+
+
+
+
+
+
+
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
