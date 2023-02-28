@@ -37,6 +37,20 @@
     },
     "name": "react-image-hotspot-viewer",
     "author": "Abiram-N",
+    "keywords": [
+        "react",
+        "image",
+        "hotspot",
+        "viewer",
+        "material-ui",
+        "mui",
+        "editable",
+        "tooltip",
+        "customizable",
+        "react-image-hotspot-viewer",
+        "react-image-hotspot",
+        "react-image-viewer"
+    ],
     "module": "dist/react-image-hotspot-viewer.esm.js",
     "size-limit": [
         {
