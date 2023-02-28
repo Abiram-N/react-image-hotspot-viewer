@@ -1,0 +1,136 @@
+
+.hotspotimage-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center;  enable this to center align the image */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* background-color: red; */
+}
+
+.hotspotimage-section-mobile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center;  enable this to center align the image */
+    overflow-x: hidden;
+    /* background-color: red; */
+}
+
+.hotspotimage-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hotspotimage-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.hotspotimage-container-mobile {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hotspotimage-container-mobile img {
+    height: 100%;
+    width: 100%;
+}
+
+.hotspotimage-tooltips {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hotspotimage-tooltips-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hotspotimage-pin {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 80%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    /* hide by default */
+    display: none;
+}
+
+.hotspotimage-pin-mobile {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 80%;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    opacity: 0.5;
+}
+
+.hotspotimage-pin-mobile:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: puls-effect 0.8s ease-in-out infinite;
+}
+
+.hotspotimage-pin:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: puls-effect 0.8s ease-in-out infinite;
+}
+
+/* .hotspotimage-tooltip {
+    position: r;
+} */
+
+/* Animate pin only when image is hovered */
+.hotspotimage-container:hover .hotspotimage-pin {
+    display: block;
+}
+
+/* Puls Effect For Pins */
+
+@keyframes puls-effect {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
