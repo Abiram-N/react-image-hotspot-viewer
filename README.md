@@ -13,7 +13,7 @@ This project uses [React](https://reactjs.org/) and [Material UI](https://materi
 React Image Hotspot Viewer requires [Node.js](https://nodejs.org/) v10+ to run.
 
 ```sh
-npm i lodash react-image-hotspot-viewer@latest
+npm i react-image-hotspot-viewer@latest
 ```
 
 ## Usage
