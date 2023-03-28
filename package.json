@@ -49,7 +49,11 @@
         "customizable",
         "react-image-hotspot-viewer",
         "react-image-hotspot",
-        "react-image-viewer"
+        "react-image-viewer",
+        "add-hotspot",
+        "edit-hotspot",
+        "delete-hotspot",
+        "manage-hotspots"
     ],
     "repository": {
         "type": "git",

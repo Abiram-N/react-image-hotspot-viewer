@@ -13,6 +13,13 @@ In Desktop view, the hotspot is displayed on hover of the image. Clicking on the
 
 ![productionimage](https://user-images.githubusercontent.com/42763936/221795862-bcce228e-dd9b-410b-987b-dc3c6082fc4b.gif)
 
+###### Managing Hotspots
+
+The component supports adding, editing and deleting hotspots. The hotspots can be managed by `onClickEvent` prop. The prop is called whenever an event is triggered. More details on the prop can be found [here](#Managing-Events).
+
+![EditableHotspots](https://user-images.githubusercontent.com/42763936/221799523-2238328a-dd1b-40e9-9ed8-8ed11f883909.gif)
+
+
 ##### Mobile View
 
 In Mobile view, the hotspot is displayed as a pin on the image. Clicking on the hotspot opens the tooltip. The tooltip can be closed by clicking elsewhere on the image.
@@ -62,7 +69,7 @@ Add the component in your project
   />
 ```
 
-## Example
+## Basic Example
 
 ```sh
 import './App.css';
@@ -127,6 +134,7 @@ export default App;
 | image | string |  | Image URL | Yes |
 | hotspots | array | [] | Array of hotspots | Yes |
 | imageStyles | object | {} | Styles for image | No |
+| onClickEvent | function |  | Function called whenever an event is triggered | No |
 
 ## Hotspot Props
 
@@ -146,20 +154,76 @@ export default App;
 | action.icon | string |  | Icon for hotspot | No |# react-image-hotspot-viewer
 
 
+## Advanced Implementation
+
+Example code for advanced implementation is available here: 
+
+### Managing Events
+
+The component supports two events. The events are triggered when the hotspot is clicked and when a new spot is clicked.
+
+```sh
+ <ImageHotspotViewer
+    image={image}
+    hotspots={hotspots}
+    imageStyles={{
+        borderRadius: '10px',
+    }}
+    onEventChange={onEventChange}
+/>
+```
+
+#### onEventChange Function
+
+onEventChange function is called whenever an event is triggered. The function takes three parameters.
+
+- event: The event that is triggered. The event can be `click`.
+- subEvent: The sub event that is triggered. The sub event can be `add-hotspot` or `edit-hotspot`
+- data: The data associated with the event. The data is an object with the properties based on the event and sub event.
+-- `add-hotspot`: The event is triggered when user clicks on the component. Sample data for this event is provided below.
+    {
+        "top": 78.06841046277665,   `// Top position of the hotspot in percentage`
+        "left": 51.64383561643836,  `// Left position of the hotspot in percentage `
+        "offsetX": 377,             `// Offset X position of the hotspot`
+        "offsetY": 388              `// Offset Y position of the hotspot`
+    }
+-- `edit-hotspot`: The event is triggered when user clicks on the hotspot.
+    {
+       "offsetX": 377,             `// Offset X position of the hotspot`
+       "offsetY": 388              `// Offset Y position of the hotspot`
+       {...restProps}                        `// All the properties of the hotspot`
+    }
+
+
+```sh
+const onEventChange = (event, subEvent, data) => {
+    switch (event) {
+        case 'click':
+            switch (subEvent) {
+                case 'add-hotspot':
+                    //Implement your logic to add hotspot here 
+                    break;
+                case 'edit-hotspot':
+                    //Implement your logic to edit hotspot here
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+}
+```
+
+
 ## Upcoming Features
 
 Below are the features that are planned to be added in the near future.
 
-![EditableHotspots](https://user-images.githubusercontent.com/42763936/221799523-2238328a-dd1b-40e9-9ed8-8ed11f883909.gif)
-
-
-
-- [ ] Add support for adding hotspot from UI
+- [x] Add support for adding hotspot from UI
 - [ ] Add support for custom tootip style
 - [ ] Add support for custom pin styles
-
-
-
 
 
 
